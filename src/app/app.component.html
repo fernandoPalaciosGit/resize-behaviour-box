@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div class="flight-box--wrapper"
+     (click)="hasContinueFlightBox && onContinueBooking($event)">
+  <article class="flight-box--itinerary-info">
+    <div>flight itinerary info departure flight</div>
+    <div>flight itinerary info return flight</div>
+  </article>
+  <aside class="flight-box--booking-info">
+    <div>flight price breakdown</div>
+    <button class="flight-box--continue-booking"
+         (click)="onContinueBooking($event)">
+      <span>continue booking</span>
+    </button>
+  </aside>
+</div>

@@ -1,0 +1,42 @@
+/******* PEGASUS Media queries breakpoints ********/
+$breakpoints: (
+  xsmall: 320px,
+  small: 480px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+) !default;
+/**************************************************/
+
+.flight-box {
+
+  &--wrapper {
+    display: flex;
+    flex: 1;
+    background-color: #dfe0e4;
+  }
+
+  &--itinerary-info {
+    flex: 1;
+    padding: 1em;
+  }
+
+  &--booking-info {
+    flex: 0 0 20vw;
+    background-color: #c6c6c6;
+    padding: 1em;
+    text-align: center;
+  }
+
+  &--continue-booking {
+    display: none;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, 'medium')) {
+  .flight-box--continue-booking {
+    display: block;
+  }
+}
